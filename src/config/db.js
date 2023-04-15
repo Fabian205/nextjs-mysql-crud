@@ -10,6 +10,8 @@ export const pool = createPool({
   database:DB_NAME
 })
 
+//url generated for railway deploy
+//nextjs-mysql-crud-production.up.railway.app
 
 //original local connection
 /* import { createPool } from "mysql2/promise";

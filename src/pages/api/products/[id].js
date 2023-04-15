@@ -19,6 +19,7 @@ const getProduct = async (req, res) => {
   const [result] = await pool.query("SELECT * FROM product WHERE id = ?", [id]);
   return res.status(200).json(result[0]);
   } catch (error) {
+    console.log('aqui error')
     return res.status(500).json({message: error.message});
   }
 };
