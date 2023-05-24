@@ -21,12 +21,11 @@ if(products.length === 0) return <h1 className="text-center text-2xl font-bold">
   );
 }
 
-export const getServerSideProps = async (context) => {
-  //console.log(context)
-  const { data: products } = await axios.get(
-    "http://localhost:3000/api/products"
-  );
+//const URL = "http://localhost:3000/api/products"
+const URL = `${process.env.NEXT_PUBLIC_HOST}/api/products`;
 
+export const getServerSideProps = async (context) => {
+  const { data: products } = await axios.get(URL);
   return {
     props: {
       products,
@@ -35,3 +34,5 @@ export const getServerSideProps = async (context) => {
 };
 
 export default HomePage;
+
+

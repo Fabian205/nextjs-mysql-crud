@@ -1,4 +1,3 @@
-//Config para subir a railway
 import { createPool } from "mysql2/promise";
 import { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME } from "./config.js";
 

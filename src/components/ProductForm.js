@@ -57,7 +57,7 @@ export function ProductForm() {
         <input
           type="text"
           name="name"
-          placeholder="Product name"
+          placeholder="Account Name"
           onChange={handleChange}
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:sahdow-outline"
           value={product.name}
@@ -82,7 +82,7 @@ export function ProductForm() {
         <label htmlFor="description" className="block text-gray-700 text-sm text-bold mb-2">Description:</label>
         <textarea
           name="description"
-          placeholder="Product description"
+          placeholder="Spend description"
           rows="2"
           onChange={handleChange}
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:sahdow-outline"
