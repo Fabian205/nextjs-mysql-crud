@@ -7,7 +7,7 @@ function ProductPage({ product }) {
 
   const handleDelete = async (id) => {
     await axios.delete("/api/products/" + id); 
-    //await axios.delete("/api/products/" + id); 
+    
     router.push("/");
     alert('Product ' + id + ' deleted successfuly' );
   };
@@ -35,7 +35,8 @@ function ProductPage({ product }) {
 
 export const getServerSideProps = async (context) => {
   const { data: product } = await axios.get(
-    "http://localhost:3000/api/products/" + context.query.id
+    //"http://localhost:3000/api/products/" + context.query.id
+    `${process.env.NEXT_PUBLIC_HOST}/api/products/` + context.query.id
   );
   
   return {
