@@ -53,7 +53,7 @@ export function ProductForm() {
         className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
       >
         <div className="mb-3">
-        <label htmlFor="name" className="block text-gray-700 text-sm text-bold mb-2">Name:</label>
+        <label htmlFor="name" className="block text-gray-700 text-sm text-bold mb-2">Account Name:</label>
         <input
           type="text"
           name="name"
