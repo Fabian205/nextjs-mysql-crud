@@ -4,7 +4,7 @@ import { ProductForm } from "@/components/ProductForm";
 function NewPage() {
   return (
     <Layout>
-      <div className="grid place-items-center bg-gray-300 h-5/6">
+      <div className="grid place-items-center bg-gray-700">
         <ProductForm />
       </div>
     </Layout>

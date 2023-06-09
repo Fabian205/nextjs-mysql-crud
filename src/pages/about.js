@@ -1,12 +1,21 @@
 import Layout from "@/components/Layout";
 
 function about() {
-  return (<Layout>
-    <h1>About</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, illo perferendis voluptate temporibus vero, magni quam ex asperiores veritatis exercitationem id soluta recusandae eos odio! Quibusdam vero quo ducimus aliquid non, odio aut impedit illum ut aliquam eius voluptatum atque omnis consectetur blanditiis sit possimus mollitia, rem necessitatibus, dolores dicta adipisci repudiandae. Harum, animi eveniet! Molestias fuga unde, harum numquam veritatis est voluptatem similique, nulla quia quos ea sit rerum laboriosam impedit aspernatur ipsa optio sequi iste rem. Sint id itaque, reiciendis dolorem suscipit perspiciatis rerum voluptates? Natus repudiandae dignissimos perferendis mollitia libero molestias, maxime iure. Unde repellat vitae fugit!</p>
-  </Layout>
-    
-  )
+  return (
+    <Layout>
+      <div className="max-w-md mx-auto bg-gray-800 rounded-lg shadow-md p-6 mt-10">
+        <div className="text-2xl font-bold mb-6 text-center">
+          <h1>About</h1>
+        </div>
+
+        <div>
+          <p className="text-justify">
+          Nobasys is a company dedicated to the development of software and web pages, our job is to design and develop desktop applications, Web applications, mobile applications, all tailored and according to the needs of our clients, Online Marketing, SEO and SEM Web positioning, we have with a solid, innovative and prepared work team in different specialties such as: Programming, Web Development, Graphic Design, Community Managers, Google AdWords, etc.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
 }
 
 export default about;

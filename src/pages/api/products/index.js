@@ -1,7 +1,6 @@
 import { pool } from "@/config/db";
 
 export default async function handler(req, res) {
-  //console.log(req.method);
   switch (req.method) {
     case "GET":
       return await getProducts(req, res);
@@ -21,7 +20,6 @@ const getProducts = async (req, res) => {
 
 const saveProduct = async (req, res) => {
   const { name, description, price } = req.body;
-  //console.log(price);
   try {
     const [result] = await pool.query("INSERT INTO product SET ?", {
       name,
