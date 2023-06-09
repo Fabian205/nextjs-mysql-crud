@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import axios from "axios";
+import Link from "next/link";
 import axiosInstance from "./axiosInstance";
 import { useRouter } from "next/router";
 import Layout from "@/components/Layout";
@@ -107,9 +108,12 @@ export default function Login() {
             </button>
             <p className="text-teal-600 italic">
               Don't Have an Account?{" "}
-              <a href="/register" className="dark:text-gray-800 italic">
+              <Link legacyBehavior href="/register">
+                <a className="dark:text-gray-800 italic">
                 Register
               </a>
+              </Link>
+              
             </p>
           </div>
         </form>
