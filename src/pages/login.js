@@ -107,7 +107,7 @@ export default function Login() {
               Login
             </button>
             <p className="text-teal-600 italic">
-              {"Don't Have an Account?"}
+              {"Don't Have an Account? "}
               <Link legacyBehavior href="/register">
                 <a className="dark:text-gray-800 italic">
                 Register
