@@ -45,7 +45,7 @@ export default function Login() {
     console.log("response de login", response); */
 
 
-    await axiosInstance
+    await axios
     .post("api/auth/signin", credentials)
     .then((response) => {
       // Manejar la respuesta exitosa

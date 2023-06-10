@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-
 // Crear una instancia de Axios
 const axiosInstance = axios.create();
-
 
 // Configurar el interceptor de respuesta
 axiosInstance.interceptors.response.use(
