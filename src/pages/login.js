@@ -112,8 +112,7 @@ export default function Login() {
                 <a className="dark:text-gray-800 italic">
                 Register
               </a>
-              </Link>
-              
+              </Link>             
             </p>
           </div>
         </form>
