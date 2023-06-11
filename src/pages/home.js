@@ -16,7 +16,7 @@ function HomePage({ products }) {
 
   return (
     <Layout>
-      <h1 className="text-center mt-4 font-bold mb-4">DIALY EXPENSES</h1>
+      <h1 className="mb-8 text-2xl font-bold tracking-tight text-gray-800 dark:text-white text-center mt-8">ALL EXPENSES</h1>
       <div className="grid gap-4 grid-cols-1 md:grid-cols-4">
         {renderProducts()}
       </div>

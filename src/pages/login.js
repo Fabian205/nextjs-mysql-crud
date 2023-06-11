@@ -63,7 +63,7 @@ export default function Login() {
   return (
     <Layout>   
       <div className="max-w-md mx-auto bg-gray-800 rounded-lg shadow-md p-6 mt-10 ">
-        <h2 className="text-2xl font-bold mb-6 text-center ">
+        <h2 className="text-2xl font-bold mb-6 text-center text-gray-400">
           Login
         </h2>
         <form
@@ -71,7 +71,7 @@ export default function Login() {
           className="shadow-md rounded px-8 pt-6 pb-8 mb-4"
         >
           <div className="mb-4">
-            <label htmlFor="email" className="block font-medium">
+            <label htmlFor="email" className="block font-medium text-gray-400 mb-1">
               Correo electrónico:
             </label>
             <input
@@ -88,7 +88,7 @@ export default function Login() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="password" className="block font-medium">
+            <label htmlFor="password" className="block font-medium text-gray-400 mb-1">
               Contraseña:
             </label>
             <input
@@ -109,7 +109,7 @@ export default function Login() {
             <p className="text-teal-600 italic">
               {"Don't Have an Account? "}
               <Link legacyBehavior href="/register">
-                <a className="dark:text-gray-800 italic">
+                <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
                 Register
               </a>
               </Link>             

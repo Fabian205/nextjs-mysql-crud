@@ -55,13 +55,13 @@ export default function Register() {
   return (
     <Layout>
       <div className="max-w-md mx-auto bg-gray-800 rounded-lg shadow-md p-6 mt-10 ">
-        <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center text-gray-400">Register</h2>
         <form
           onSubmit={handleSubmit}
           className="shadow-md rounded px-8 pt-6 pb-8 mb-4"
         >
           <div className="mb-4">
-            <label htmlFor="email" className="block font-medium">
+            <label htmlFor="email" className="block font-medium text-gray-400 mb-1">
               E-mail:
             </label>
             <input
@@ -78,7 +78,7 @@ export default function Register() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="password" className="block font-medium">
+            <label htmlFor="password" className="block font-medium text-gray-400 mb-1">
               Password:
             </label>
             <input
@@ -94,7 +94,7 @@ export default function Register() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="confirmPassword" className="block font-medium">
+            <label htmlFor="confirmPassword" className="block font-medium text-gray-400 mb-1">
               Confirm Password:
             </label>
             <input

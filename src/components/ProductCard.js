@@ -19,7 +19,7 @@ export function ProductCard({ product }) {
           </div>
           <div className="flex flex-col">
             <p className="text-indigo-500">Concepto :</p>
-            <p className="ml-3 text-white">{product.description}</p>
+            <p className="text-white">{product.description}</p>
           </div>
         </div>
       </a>

@@ -8,14 +8,14 @@ export function Layout({ children }) {
   const New = () => {
     router.push("/new");
   };
-
+  
   return (
     <>
       <h1>
         <Navbar />
       </h1>
       {/*  max-w(width) sm, lg, md */}
-      <div className="bg-gray-700 h-screen flex justify-center">
+      <div className=" h-screen flex justify-center bg-gray-700 overflow-x-auto">
         <div className="container mx-auto h-full">{children}</div>
       </div>
       <ToastContainer />     
@@ -24,3 +24,11 @@ export function Layout({ children }) {
 }
 
 export default Layout;
+
+
+/* position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll; */

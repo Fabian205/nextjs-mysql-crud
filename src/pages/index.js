@@ -10,7 +10,7 @@ function Index() {
 
   return (
     <Layout>
-      <h1 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center mt-8">DIALY EXPENSES</h1>
+      <h1 className="mb-2 text-2xl font-bold tracking-tight text-gray-800 dark:text-white text-center mt-8">DIALY EXPENSES</h1>
       {/* <div className="grid gap-4 grid-cols-1 md:grid-cols-4 mt-12">  */}
       <div className="container mx-auto mt-8 max-w-lg bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">

@@ -48,7 +48,7 @@ export function ProductForm() {
 
   return (
     <div className="max-w-md mx-auto rounded-lg bg-gray-800 p-6 mt-10">
-      <h2 className="text-2xl font-bold mb-6 text-center">
+      <h2 className="text-2xl font-bold mb-6 text-center text-gray-400">
           Expense record
         </h2>
       <form
@@ -56,7 +56,7 @@ export function ProductForm() {
         className="shadow-md rounded px-8 pt-6 pb-8 mb-4"
       >
         <div className="mb-3">
-        <label htmlFor="name" className="block text-indigo-500 text-sm text-bold mb-2">Cuenta:</label>
+        <label htmlFor="name" className="block text-gray-400 text-sm text-bold mb-2">Cuenta:</label>
         <select 
         
         className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline"
@@ -76,7 +76,7 @@ export function ProductForm() {
         </div>
 
         <div className="mb-3">
-        <label htmlFor="price" className="block text-indigo-500 text-sm text-bold mb-2">Valor:</label>
+        <label htmlFor="price" className="block text-gray-400 text-sm text-bold mb-2">Valor:</label>
         <input
           type="text"
           name="price"
@@ -89,7 +89,7 @@ export function ProductForm() {
         />
         </div>
         <div className="mb-3">
-        <label htmlFor="description" className="block text-indigo-500 text-sm text-bold mb-2">Concepto:</label>
+        <label htmlFor="description" className="block text-gray-400 text-sm text-bold mb-2">Concepto:</label>
         <textarea
           name="description"
           id="description"
