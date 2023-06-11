@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
-import axiosInstance from "./axiosInstance";
+import axiosInstance from "../../axiosInstance";
 import { useRouter } from "next/router";
 import Layout from "@/components/Layout";
 

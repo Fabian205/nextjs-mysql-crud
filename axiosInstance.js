@@ -1,15 +1,7 @@
 import axios from 'axios';
 
 // Crear una instancia de Axios
-const axiosInstance = axios.create(
-  {
-    baseURL: 'api/auth/signin', // URL base de la API
-    headers: {
-      'Content-Type': 'application/json',
-      // Otros encabezados personalizados
-    },
-  }
-);
+const axiosInstance = axios.create();
 
 // Configurar el interceptor de respuesta
 axiosInstance.interceptors.response.use(
