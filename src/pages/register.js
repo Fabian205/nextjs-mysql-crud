@@ -4,6 +4,18 @@ import { useRouter } from "next/router";
 import Layout from "@/components/Layout";
 
 export default function Register() {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const [showPasswordConfirm, setShowPasswordConfirm] = useState(false);
+
+  const togglePasswordConfirmVisibility = () => {
+    setShowPasswordConfirm(!showPasswordConfirm);
+  };
+
   const inputName = useRef(null);
 
   useEffect(() => {
@@ -42,7 +54,7 @@ export default function Register() {
         if (response.status === 200) {
           alert("User created successfully");
           router.push("/login");
-        }        
+        }
       } else {
         alert("Key does not match, try again!");
         handleClearInput();
@@ -55,13 +67,18 @@ export default function Register() {
   return (
     <Layout>
       <div className="max-w-md mx-auto bg-gray-800 rounded-lg shadow-md p-6 mt-10 ">
-        <h2 className="text-2xl font-bold mb-6 text-center text-gray-400">Register</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center text-gray-400">
+          Register
+        </h2>
         <form
           onSubmit={handleSubmit}
           className="shadow-md rounded px-8 pt-6 pb-8 mb-4"
         >
           <div className="mb-4">
-            <label htmlFor="email" className="block font-medium text-gray-400 mb-1">
+            <label
+              htmlFor="email"
+              className="block font-medium text-gray-400 mb-1"
+            >
               E-mail:
             </label>
             <input
@@ -78,35 +95,70 @@ export default function Register() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="password" className="block font-medium text-gray-400 mb-1">
+            <label
+              htmlFor="password"
+              className="block font-medium text-gray-400 mb-1"
+            >
               Password:
             </label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Password"
-              value={credentials.password}
-              onChange={handleChange}
-              //ref={inputPass}
-              className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"
-              required
-            />
+            <div
+            className="relative"
+            >
+              <input
+                type={showPassword ? 'text' : 'password'}
+                name="password"
+                id="password"
+                placeholder="Password"
+                value={credentials.password}
+                onChange={handleChange}
+                className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"
+                required
+              />
+              <button
+              type="button" 
+              onClick={togglePasswordVisibility}  
+              className="absolute top-1/2 right-3 transform -translate-y-1/2"            
+              >
+                <img
+                  src={showPassword ? "/showpass.png" : "/password.png"}
+                  alt="Toggle Password"
+                  className="w-5 h-5"
+                />
+              </button>
+            </div>
           </div>
           <div className="mb-4">
-            <label htmlFor="confirmPassword" className="block font-medium text-gray-400 mb-1">
+            <label
+              htmlFor="confirmPassword"
+              className="block font-medium text-gray-400 mb-1"
+            >
               Confirm Password:
             </label>
-            <input
-              type="password"
-              name="confirmPassword"
-              id="confirmPassword"
-              placeholder="Confirm password"
-              value={credentials.confirmPassword}
-              onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"
-              required
-            />
+            <div
+            className="relative"
+            >
+              <input
+                type={showPasswordConfirm ? 'text' : 'password'}
+                name="confirmPassword"
+                id="confirmPassword"
+                placeholder="Confirm password"
+                value={credentials.confirmPassword}
+                onChange={handleChange}
+                className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"
+                required
+              />
+              <button
+              type="button" 
+              onClick={togglePasswordConfirmVisibility}  
+              className="absolute top-1/2 right-3 transform -translate-y-1/2"            
+              >
+                <img
+                  src={showPassword ? "/showpass.png" : "/password.png"}
+                  alt="Toggle Password"
+                  className="w-5 h-5"
+                />
+              </button>
+            </div>
           </div>
           <div>
             <button className="bg-blue-600 text-white rounded py-2 px-4 hover:bg-blue-800 mb-4">

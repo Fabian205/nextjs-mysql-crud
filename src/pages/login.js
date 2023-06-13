@@ -7,6 +7,12 @@ import Layout from "@/components/Layout";
 
 export default function Login() {
 
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
   const inputName = useRef(null);
 
   useEffect(() => {
@@ -71,7 +77,10 @@ export default function Login() {
           className="shadow-md rounded px-8 pt-6 pb-8 mb-4"
         >
           <div className="mb-4">
-            <label htmlFor="email" className="block font-medium text-gray-400 mb-1">
+            <label
+              htmlFor="email"
+              className="block font-medium text-gray-400 mb-1"
+            >
               Correo electrónico:
             </label>
             <input
@@ -88,31 +97,51 @@ export default function Login() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="password" className="block font-medium text-gray-400 mb-1">
+            <label
+              htmlFor="password"
+              className="block font-medium text-gray-400 mb-1"
+            >
               Contraseña:
             </label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Password"
-              value={credentials.password}
-              onChange={handleChange}
-              className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"
-              required
-            />
+            <div 
+            className="relative"            
+            >
+              <input
+                type={showPassword ? 'text' : 'password'}
+                name="password"
+                id="password"
+                placeholder="Password"
+                value={credentials.password}
+                onChange={handleChange}
+                className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"
+                required
+              />
+              <button
+              type="button" 
+              onClick={togglePasswordVisibility}  
+              className="absolute top-1/2 right-3 transform -translate-y-1/2"            
+              >
+                <img
+                  src={showPassword ? "/showpass.png" : "/password.png"}
+                  alt="Toggle Password"
+                  className="w-5 h-5"
+                />
+              </button>
+            </div>
           </div>
           <div>
-            <button className="bg-blue-600 text-white rounded py-2 px-4 hover:bg-blue-800 mb-4">
+            <button 
+            type="submit"
+            className="bg-blue-600 text-white rounded py-2 px-4 hover:bg-blue-800 mb-4">
               Login
             </button>
             <p className="text-teal-600 italic">
               {"Don't Have an Account? "}
               <Link legacyBehavior href="/register">
                 <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
-                Register
-              </a>
-              </Link>             
+                  Register
+                </a>
+              </Link>
             </p>
           </div>
         </form>
