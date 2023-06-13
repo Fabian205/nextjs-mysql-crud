@@ -120,7 +120,7 @@ export default function Register() {
               className="absolute top-1/2 right-3 transform -translate-y-1/2"            
               >
                 <img
-                  src={showPassword ? "/showpass.png" : "/password.png"}
+                  src={showPassword ? "/password.png" : "/showpass.png"}
                   alt="Toggle Password"
                   className="w-5 h-5"
                 />
@@ -153,7 +153,7 @@ export default function Register() {
               className="absolute top-1/2 right-3 transform -translate-y-1/2"            
               >
                 <img
-                  src={showPassword ? "/showpass.png" : "/password.png"}
+                  src={showPassword ? "/password.png" : "/showpass.png"}
                   alt="Toggle Password"
                   className="w-5 h-5"
                 />
