@@ -21,9 +21,9 @@ export function Navbar() {
             className="h-8 mr-5"
             alt="Logo Noba"
           />
-          <span className="text-xs xs:text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl  self-center font-semibold whitespace-nowrap dark:text-white">
+          {/* <span className="text-xs xs:text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl  self-center font-semibold whitespace-nowrap dark:text-white">
             Software Dev
-          </span>
+          </span> */}
         </a>
         <button
           id="boton"
