@@ -86,7 +86,7 @@ export default function Register() {
               id="email"
               name="email"
               autoComplete="on"
-              placeholder="Email"
+              //placeholder="Email"
               value={credentials.email}
               ref={inputName}
               onChange={handleChange}
@@ -108,7 +108,7 @@ export default function Register() {
                 type={showPassword ? 'text' : 'password'}
                 name="password"
                 id="password"
-                placeholder="Password"
+                //placeholder="Password"
                 value={credentials.password}
                 onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"
@@ -141,7 +141,7 @@ export default function Register() {
                 type={showPasswordConfirm ? 'text' : 'password'}
                 name="confirmPassword"
                 id="confirmPassword"
-                placeholder="Confirm password"
+                //placeholder="Confirm password"
                 value={credentials.confirmPassword}
                 onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"

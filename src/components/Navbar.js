@@ -16,12 +16,13 @@ export function Navbar() {
           className="flex items-center"
         >
           <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8 mr-3"
-            alt="Flowbite Logo"
+            //src="https://flowbite.com/docs/images/logo.svg"
+            src="nobalog.png"
+            className="h-8 mr-5"
+            alt="Logo Noba"
           />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Nobasys
+            Software Development
           </span>
         </a>
         <button

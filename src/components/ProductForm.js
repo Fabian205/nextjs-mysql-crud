@@ -59,13 +59,13 @@ export function ProductForm() {
         <label htmlFor="name" className="block text-gray-400 text-sm text-bold mb-2">Cuenta:</label>
         <select 
         
-        className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline"
+        className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline hover:bg-gray-300"
         name="name"
         id="name"       
         value={product.name}
         onChange={handleChange}       
         >
-          <option color="blue" value="seleccion" defaultValue>Seleccione la cuenta</option>
+          <option color="blue" value="seleccion" defaultValue>Select an account</option>
           <option color="yellow" value="Cta_Cte_Bp-Rp">Cta_Cte_Bp-Rp</option>
           <option color="yellow" value="Cta_Aho_Bp-Rp">Cta_Aho_Bp-Rp</option>
           <option color="green" value="Cta_Aho_Cacpn-Rp">Cta_Aho_Cacpn-Rp</option>
@@ -93,7 +93,7 @@ export function ProductForm() {
         <textarea
           name="description"
           id="description"
-          placeholder="Concepto"
+          //placeholder="Concepto"
           rows="5"
           onChange={handleChange}
           className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"
@@ -101,7 +101,7 @@ export function ProductForm() {
         ></textarea>
         </div>
         <button className="bg-blue-600 hover:bg-blue-800 py-2 px-4 rounded focus:outline-none focus: shadow-outline font-bold text-white">
-          {router.query.id ? "Update Product" : "Save Product"}
+          {router.query.id ? "Update Expense" : "Save Expense"}
         </button>
       </form>
     </div>

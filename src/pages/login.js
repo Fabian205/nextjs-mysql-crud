@@ -81,14 +81,14 @@ export default function Login() {
               htmlFor="email"
               className="block font-medium text-gray-400 mb-1"
             >
-              Correo electrónico:
+              E-mail:
             </label>
             <input
               type="email"
               id="email"
               name="email"
               autoComplete="on"
-              placeholder="Email"
+              //placeholder="Email"
               value={credentials.email}
               onChange={handleChange}
               ref={inputName}
@@ -101,7 +101,7 @@ export default function Login() {
               htmlFor="password"
               className="block font-medium text-gray-400 mb-1"
             >
-              Contraseña:
+              Password:
             </label>
             <div 
             className="relative"            
@@ -110,7 +110,7 @@ export default function Login() {
                 type={showPassword ? 'text' : 'password'}
                 name="password"
                 id="password"
-                placeholder="Password"
+                //placeholder="Password"
                 value={credentials.password}
                 onChange={handleChange}
                 className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"
