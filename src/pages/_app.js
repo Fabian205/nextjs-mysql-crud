@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Título de tu página</title>
+        <title>Dialy Expenses</title>
       </Head>
       <Component {...pageProps} />
     </>
