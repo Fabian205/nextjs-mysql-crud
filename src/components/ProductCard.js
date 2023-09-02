@@ -21,6 +21,10 @@ export function ProductCard({ product }) {
             <p className="text-indigo-500">Concepto :</p>
             <p className="text-white">{product.description}</p>
           </div>
+          <div className="flex flex-col">
+            <p className="text-indigo-500">Fecha/Hora :</p>
+            <p className="text-white">{product.createdAt}</p>
+          </div>
         </div>
       </a>
     </Link>

@@ -11,12 +11,10 @@ axiosInstance.interceptors.response.use(
       // Personalizar el manejo del error 401 aquí
       // Por ejemplo, mostrar un mensaje de error o redireccionar a una página de inicio de sesión
       console.log('Error 401: Not authorized');
-      alert('Error 401: Not authorized, Invalid username and/or password, try again');
-      
+      alert('Error 401: Not authorized, your credentials are not valid, try again');      
     }
     return Promise.reject(error);
   }
 );
-
 export default axiosInstance;
 

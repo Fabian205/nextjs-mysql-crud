@@ -65,13 +65,13 @@ export function ProductForm() {
         value={product.name}
         onChange={handleChange}       
         >
-          <option color="blue" value="seleccion" defaultValue>Select an account</option>
-          <option color="yellow" value="Cta_Cte_Bp-Rp">Cta_Cte_Bp-Rp</option>
+          <option color="blue" value="seleccion" defaultValue>Select an account</option>          
           <option color="yellow" value="Cta_Aho_Bp-Rp">Cta_Aho_Bp-Rp</option>
-          <option color="green" value="Cta_Aho_Cacpn-Rp">Cta_Aho_Cacpn-Rp</option>
-          <option color ="gray" value="Cta_Pa">Cta_Pa</option>
-          <option color="magenta" value="Cta_Lou">Cta_Lou</option>
-          <option value="Efectivo">Efectivo</option>
+          <option color="yellow" value="Cta_Cte_Bp-Rp">Cta_Cte_Bp-Rp</option>
+          <option color="green" value="Cta_Aho_Cacpn-Rp">Cta_Aho_Cacpn-Rp</option>         
+          <option color ="gray" value="Cta_Pa">Cta_Aho_Bp-Pa</option>
+          <option color="magenta" value="Cta_Lou">EfectivoRp</option>
+          <option color="magenta" value="Efectivo">EfectivoPa</option>
         </select>
         </div>
 
