@@ -16,7 +16,7 @@ export default async function signinHandler(req, res) {
     );
     const bdemail = result[0].email;
     const bdpassword = result[0].password;
-
+    console.log(bdemail, bdpassword)
     if (email === bdemail && password === bdpassword) {
       const token = jwt.sign(
         {
