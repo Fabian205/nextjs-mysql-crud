@@ -19,17 +19,19 @@ const getProducts = async (req, res) => {
 };
 
 const saveProduct = async (req, res) => {
-  const { name, description, price } = req.body;
+  const { name, description, date, income, price } = req.body;
   try {
     const [result] = await pool.query("INSERT INTO product SET ?", {
       name,
       description,
+      date,
+      income,
       price,
     });
 
     return res
       .status(200)
-      .json({ name, description, price, id: result.insertId });
+      .json({ name, description, date, income, price, id: result.insertId });
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }

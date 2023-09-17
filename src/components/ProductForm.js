@@ -7,28 +7,30 @@ export function ProductForm() {
   const [product, setProduct] = useState({
     name: "",
     description: "",
+    date: "",
+    income: "",
     price: "",
   });
 
   const router = useRouter();
 
-  const handleSubmit = async (e) => {    
+  const handleSubmit = async (e) => {
     e.preventDefault();
     //toast.success no trabaja cuando se rutea la page
     try {
       if (router.query.id) {
         await axios.put("/api/products/" + router.query.id, product);
         //toast.success("Product updated successfully");
-        alert("Product updated successfully");        
+        alert("Product updated successfully");
       } else {
         await axios.post("/api/products", product);
         //toast.success("Product created successfully");
-        alert("Product created successfully"); 
+        alert("Product created successfully");
       }
       router.push("/home");
     } catch (error) {
       //toast.error(error.response.data.message);
-      alert(error.response.data.message)
+      alert(error.response.data.message);
     }
   };
 
@@ -49,56 +51,123 @@ export function ProductForm() {
   return (
     <div className="max-w-md mx-auto rounded-lg bg-gray-800 p-6 mt-10">
       <h2 className="text-2xl font-bold mb-6 text-center text-gray-400">
-          Expense record
-        </h2>
+        Movement record
+      </h2>
       <form
         onSubmit={handleSubmit}
         className="shadow-md rounded px-8 pt-6 pb-8 mb-4"
       >
         <div className="mb-3">
-        <label htmlFor="name" className="block text-gray-400 text-sm text-bold mb-2">Cuenta:</label>
-        <select 
-        
-        className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline hover:bg-gray-300"
-        name="name"
-        id="name"       
-        value={product.name}
-        onChange={handleChange}       
-        >
-          <option color="blue" value="seleccion" defaultValue>Select an account</option>          
-          <option color="yellow" value="Cta_Aho_Bp-Rp">Cta_Aho_Bp-Rp</option>
-          <option color="yellow" value="Cta_Cte_Bp-Rp">Cta_Cte_Bp-Rp</option>
-          <option color="green" value="Cta_Aho_Cacpn-Rp">Cta_Aho_Cacpn-Rp</option>         
-          <option color ="gray" value="Cta_Aho_Bp-Pa">Cta_Aho_Bp-Pa</option>
-          <option color="magenta" value="EfectivoRp">EfectivoRp</option>
-          <option color="magenta" value="EfectivoPa">EfectivoPa</option>
-        </select>
+          <label
+            htmlFor="name"
+            className="block text-gray-400 text-sm text-bold mb-2"
+          >
+            Account:
+          </label>
+          <select
+            className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline hover:bg-gray-300"
+            name="name"
+            id="name"
+            value={product.name}
+            onChange={handleChange}
+          >
+            <option color="blue" value="seleccion" defaultValue>
+              Select an account
+            </option>
+            <option color="yellow" value="SavAccount Bp-Rp">
+              SavAccount Bp-Rp
+            </option>
+            <option color="yellow" value="CurAccount Bp-Rp">
+              CurAccount Bp-Rp
+            </option>
+            <option color="green" value="SavAccount Cacpn-Rp">
+              SavAccount Cacpn-Rp
+            </option>
+            <option color="gray" value="SavAccount Bp-Pa">
+              SavAccount Bp-Pa
+            </option>
+            <option color="magenta" value="Cash Rp">
+              Cash Rp
+            </option>
+            <option color="magenta" value="Cash Pa">
+              Cash Pa
+            </option>
+          </select>
         </div>
 
         <div className="mb-3">
-        <label htmlFor="price" className="block text-gray-400 text-sm text-bold mb-2">Valor:</label>
-        <input
-          type="text"
-          name="price"
-          id="price"
-          placeholder="0.00"          
-          pattern="[0-9]{1,}\.[0-9]{1,}"
-          onChange={handleChange}
-          className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"
-          value={product.price}
-        />
+          <label
+            htmlFor="income"
+            className="block text-gray-400 text-sm text-bold mb-2"
+          >
+            Income:
+          </label>
+          <input
+            type="text"
+            name="income"
+            id="income"
+            placeholder="0.00"
+            pattern="[0-9]{1,}\.[0-9]{1,}"
+            onChange={handleChange}
+            className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"
+            value={product.income}
+          />
         </div>
+
         <div className="mb-3">
-        <label htmlFor="description" className="block text-gray-400 text-sm text-bold mb-2">Concepto:</label>
-        <textarea
-          name="description"
-          id="description"
-          //placeholder="Concepto"
-          rows="5"
-          onChange={handleChange}
-          className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"
-          value={product.description}
-        ></textarea>
+          <label
+            htmlFor="price"
+            className="block text-gray-400 text-sm text-bold mb-2"
+          >
+            Spent:
+          </label>
+          <input
+            type="text"
+            name="price"
+            id="price"
+            placeholder="0.00"
+            pattern="[0-9]{1,}\.[0-9]{1,}"
+            onChange={handleChange}
+            className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"
+            value={product.price}
+          />
+        </div>
+
+        <div className="mb-3">
+          <label
+            htmlFor="date"
+            className="block text-gray-400 text-sm text-bold mb-2"
+          >
+            Date:
+          </label>
+          <input
+            type="date"
+            name="date"
+            id="date"
+            placeholder="date"
+            pattern="[0-9]{1,}\.[0-9]{1,}"
+            onChange={handleChange}
+            className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"
+            value={product.date}
+          />
+        </div>
+
+        <div className="mb-3">
+          <label
+            htmlFor="description"
+            className="block text-gray-400 text-sm text-bold mb-2"
+          >
+            Description:
+          </label>
+          <textarea
+            name="description"
+            id="description"
+            placeholder="Description"
+            rows="5"
+            onChange={handleChange}
+            className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"
+            value={product.description}
+          ></textarea>
         </div>
         <button className="bg-blue-600 hover:bg-blue-800 py-2 px-4 rounded focus:outline-none focus: shadow-outline font-bold text-white">
           {router.query.id ? "Update Expense" : "Save Expense"}

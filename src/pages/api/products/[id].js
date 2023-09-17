@@ -38,13 +38,13 @@ const deleteProduct = async (req, res) => {
 const updateProduct = async (req, res) => {
   //other form
   //const { id } = req.body;
-  const { name, description, price, id } = req.body;
+  const { name, description, date, income, price, id } = req.body;
   try {
     //other form
     //await pool.query("UPDATE product SET ? WHERE id = ?", [req.body, id]);
     await pool.query(
-      "UPDATE product SET name = ?, description = ?, price = ? WHERE id = ?",
-      [name, description, price, id]
+      "UPDATE product SET name = ?, description = ?, date = ?, income =?, price = ? WHERE id = ?",
+      [name, description, date, income, price, id]
     );
     return res.status(204).json();
   } catch (error) {
