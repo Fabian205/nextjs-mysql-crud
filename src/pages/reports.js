@@ -14,12 +14,12 @@ function Reports() {
           <div className="flex flex-col">
             <Link legacyBehavior href="/estadoscuenta">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
-                Estado de Cuenta
+                Account status
               </a>
             </Link>
-            <Link legacyBehavior href="/admin/consultapagosadmin">
+            <Link legacyBehavior href="/consultapagos">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
-                Consulta de Pagos
+                Payment inquiry
               </a>
             </Link>
             <Link legacyBehavior href="/admin/consultaexpensasadmin">

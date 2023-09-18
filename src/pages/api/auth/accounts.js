@@ -17,7 +17,7 @@ export default async function handleAccount(req, res) {
     const balanceDbRed= balanceDb.toFixed(2)
 
     //console.log(ingresosDb, gastosDb, balanceDb);
-    console.log(result)
+    //console.log(result)
     return res
       .status(200)
       .json(balanceDbRed);

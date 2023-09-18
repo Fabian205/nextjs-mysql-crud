@@ -3,13 +3,14 @@ import Layout from "@/components/Layout";
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import axiosInstance from "../../axiosInstance";
+import DataList from "@/components/DataList";
 
-function EstadosCuenta() {
-  const [data, setData] = useState("")
+function ConsultaPagos() {
+  const [data, setData] = useState([]);
 
   const [period, setPeriod] = useState({
     name: "",
-    f_ini: "2023-09-01",
+    f_ini: "",
     f_fin: "",
   });
 
@@ -39,12 +40,14 @@ function EstadosCuenta() {
     console.log("response de login", response); */
 
     await axiosInstance
-      .post("api/auth/accounts", period)
+      .post("api/auth/pays", period)
       .then((response) => {
         // Manejar la respuesta exitosa
-        //router.push("/home");
         //console.log(response.data);
+
         setData(response.data);
+        console.log(data);
+        //router.push("/home");
       })
       .catch((error) => {
         // El error 401 será interceptado y manejado de manera personalizada
@@ -57,7 +60,7 @@ function EstadosCuenta() {
     <Layout>
       <div className="max-w-md mx-auto bg-gray-800 rounded-lg shadow-md p-6 mt-10 ">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-400">
-          Account status
+          Payment inquiry
         </h2>
         <form
           onSubmit={handleSubmit}
@@ -106,7 +109,7 @@ function EstadosCuenta() {
               htmlFor="f_ini"
               className="block font-medium text-gray-400 mb-1"
             >
-              Since:
+              Sinse:
             </label>
             <div className="relative">
               <input
@@ -155,7 +158,14 @@ function EstadosCuenta() {
             <h1 className="text-indigo-700">Date obtained:</h1>
           </div>
           <div>
-            <p className="bg-green-700" >{data}</p>
+            {data.map((item, index) => (
+              <div key={index}>
+                <p className="text-gray-700">Expense: {item.price}</p>
+                <p className="text-gray-700">Date: {item.date}</p>
+                <p className="text-gray-700">Description: {item.description}</p>
+                <div className="bg-green-700 w-[100px] h-[2px]"></div>
+              </div>
+            ))}
           </div>
         </form>
       </div>
@@ -163,4 +173,4 @@ function EstadosCuenta() {
   );
 }
 
-export default EstadosCuenta;
+export default ConsultaPagos;
