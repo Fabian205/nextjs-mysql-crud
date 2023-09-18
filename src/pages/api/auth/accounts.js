@@ -14,12 +14,13 @@ export default async function handleAccount(req, res) {
     const ingresosDb = result[0].Ingresos
     const gastosDb = result[0].Gastos
     const balanceDb= ingresosDb-gastosDb
+    const balanceDbRed= balanceDb.toFixed(2)
 
     //console.log(ingresosDb, gastosDb, balanceDb);
-    //console.log(result)
+    console.log(result)
     return res
       .status(200)
-      .json(balanceDb);
+      .json(balanceDbRed);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
