@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import axiosInstance from "../../axiosInstance";
-import DataList from "@/components/DataList";
+
 
 function ConsultaPagos() {
   const [data, setData] = useState([]);
