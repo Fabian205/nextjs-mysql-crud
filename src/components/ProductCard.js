@@ -11,7 +11,7 @@ export function ProductCard({ product }) {
           </div>
           <div className="flex flex-row space-x-4">
             <p className="text-indigo-500">Income:</p>
-            <p className="ml-3">{product.income}</p>
+            <p className="ml-3 text-white">{product.income}</p>
           </div>
           <div className="flex flex-row space-x-4">
             <p className="text-indigo-500">Spend :</p>
