@@ -170,7 +170,7 @@ export function ProductForm() {
           ></textarea>
         </div>
         <button className="bg-blue-600 hover:bg-blue-800 py-2 px-4 rounded focus:outline-none focus: shadow-outline font-bold text-white">
-          {router.query.id ? "Update Expense" : "Save Expense"}
+          {router.query.id ? "Update Record" : "Save Record"}
         </button>
       </form>
     </div>

@@ -44,12 +44,10 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     /* const response = await axios.post("api/auth/signin", credentials);
-
     if (response.status === 200) {
       router.push("/home");
     }
     console.log("response de login", response); */
-
 
     await axiosInstance
     .post("api/auth/signin", credentials)
@@ -63,7 +61,6 @@ export default function Login() {
       console.error(error);
       handleClearInput();
     });
-
   };
 
   return (

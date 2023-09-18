@@ -8,7 +8,7 @@ function ProductPage({ product }) {
   const handleDelete = async (id) => {
     await axios.delete("/api/products/" + id);
 
-    router.push("/");
+    router.push("/home");
     alert("Product " + id + " deleted successfuly");
   };
 
