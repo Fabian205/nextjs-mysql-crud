@@ -22,14 +22,14 @@ function Reports() {
                 Payment inquiry
               </a>
             </Link>
-            <Link legacyBehavior href="/admin/consultaexpensasadmin">
+            <Link legacyBehavior href="/consultaingresos">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
-                Consulta de Expensas
+                Income inquiry
               </a>
             </Link>
-            <Link legacyBehavior href="/admin/consultahistorialadmin">
+            <Link legacyBehavior href="/filter">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
-                Consulta Historial
+                Filter
               </a>
             </Link>
             <Link legacyBehavior href="/admin/estadocuentageneraladmin">

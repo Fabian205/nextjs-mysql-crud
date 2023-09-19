@@ -46,7 +46,7 @@ function ConsultaPagos() {
         //console.log(response.data);
 
         setData(response.data);
-        console.log(data);
+        //console.log(data);
         //router.push("/home");
       })
       .catch((error) => {
@@ -160,6 +160,7 @@ function ConsultaPagos() {
           <div>
             {data.map((item, index) => (
               <div key={index}>
+                <p className="text-gray-700">Id: {item.id}</p>
                 <p className="text-gray-700">Expense: {item.price}</p>
                 <p className="text-gray-700">Date: {item.date}</p>
                 <p className="text-gray-700">Description: {item.description}</p>

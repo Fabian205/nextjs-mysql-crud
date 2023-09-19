@@ -21,6 +21,7 @@ export default async function handleAccount(req, res) {
     return res
       .status(200)
       .json(balanceDbRed);
+      //.json(result);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
