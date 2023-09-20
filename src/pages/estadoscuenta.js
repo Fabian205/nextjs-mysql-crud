@@ -156,15 +156,7 @@ function EstadosCuenta() {
             <h1 className="text-indigo-700">Date obtained:</h1>
           </div>
           <div>
-            <p className="bg-green-700" >{datos}</p>
-            {/* {datos.map((item, index) => (
-              <div key={index}>
-                <p className="text-gray-700">Income: {item.Ingresos}</p>
-                <p className="text-gray-700">Expense: {item.Gastos}</p>
-                <p className="text-gray-700">Balance: {item.description}</p>
-                <div className="bg-green-700 w-[100px] h-[2px]"></div>
-              </div>
-            ))} */}
+            <p className="bg-green-700 text-white" >{datos}</p>
           </div>
         </form>
       </div>

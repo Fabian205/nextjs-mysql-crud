@@ -160,11 +160,11 @@ function ConsultaIngresos() {
           <div>
             {data.map((item, index) => (
               <div key={index}>
-                <p className="text-gray-700">Id: {item.id}</p>
-                <p className="text-gray-700">Income: {item.income}</p>
-                <p className="text-gray-700">Date: {item.date}</p>
-                <p className="text-gray-700">Description: {item.description}</p>
-                <div className="bg-green-700 w-[100px] h-[2px]"></div>
+                <p className="text-white">Id: {item.id}</p>
+                <p className="text-white">Income: {item.income}</p>
+                <p className="text-white">Date: {item.date}</p>
+                <p className="text-white">Description: {item.description}</p>
+                <div className="bg-green-700  text-white w-[100px] h-[2px]"></div>
               </div>
             ))}
           </div>
