@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import axios from "axios";
 import { ProductCard } from "@/components/ProductCard";
+import Link from "next/link";
 
 function HomePage({ products }) {
   const renderProducts = () => {
@@ -16,8 +17,15 @@ function HomePage({ products }) {
 
   return (
     <Layout>
-      <h1 className="mb-8 text-2xl font-bold tracking-tight text-gray-800 dark:text-white text-center mt-8">ALL EXPENSES</h1>
-      <div className="grid gap-4 grid-cols-1 md:grid-cols-4">
+      <h1 className="mb-8 text-2xl font-bold tracking-tight text-gray-800 dark:text-white text-center mt-8">
+        ALL EXPENSES
+      </h1>
+      <Link legacyBehavior href="/filter">
+        <a className="dark:text-gray-400 italic underline hover:text-teal-400 text-2xl">
+          Search by id
+        </a>
+      </Link>
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-4 mt-4">
         {renderProducts()}
       </div>
     </Layout>

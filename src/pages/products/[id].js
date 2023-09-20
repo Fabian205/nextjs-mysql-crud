@@ -16,9 +16,10 @@ function ProductPage({ product }) {
     <Layout> 
       <div className="container mx-auto max-w-sm  bg-gray-800 border border-gray-200 shadow-md p-3 mt-5">
         <div className="m-4 text-white ">
-          <h1>{product.name}</h1>          
-          <p>{product.price}</p>
-          <p>{product.description}</p>
+          <h1 className="text-2xl">Id: {product.id}</h1> 
+          <p>Account: {product.name}</p>       
+          <p>Valor: {product.price}</p>
+          <p>Description: {product.description}</p>
         </div>
         <div className="flex flex-row space-x-4 justify-center">
           <button
