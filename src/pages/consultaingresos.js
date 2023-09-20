@@ -40,7 +40,7 @@ function ConsultaIngresos() {
     console.log("response de login", response); */
 
     await axiosInstance
-      .post("api/auth/income", period)
+      .post("api/inquiries/income", period)
       .then((response) => {
         // Manejar la respuesta exitosa
         //console.log(response.data);
@@ -143,13 +143,18 @@ function ConsultaIngresos() {
               />
             </div>
           </div>
-
-          <div>
+          <div className="flex flex-row space-x-4 justify-center mt-5">
             <button
               type="submit"
               className="bg-blue-600 text-white rounded py-2 px-4 hover:bg-blue-800 mb-4"
             >
               Report
+            </button>
+            <button
+              className="bg-blue-600 text-white  rounded py-2 px-4 hover:bg-gray-400 mb-4"
+              onClick={() => router.push("/reports")}
+            >
+              Return
             </button>
           </div>
         </form>

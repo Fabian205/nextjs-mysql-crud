@@ -27,4 +27,3 @@ export default async function handleAccount(req, res) {
   }
 }
 
-//"SELECT email, password FROM users WHERE email = '" + email + "' AND password = '" + password + "'"

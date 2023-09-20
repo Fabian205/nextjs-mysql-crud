@@ -4,12 +4,12 @@ import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import axiosInstance from "../../axiosInstance";
 
-function EstadosCuenta() {
+function TotalIngresos() {
   const [datos, setDatos] = useState(" ");
 
   const [period, setPeriod] = useState({
     name: "",
-    f_ini: "2023-09-01",
+    f_ini: "",
     f_fin: "",
   });
 
@@ -39,7 +39,7 @@ function EstadosCuenta() {
     console.log("response de login", response); */
 
     await axiosInstance
-      .post("api/inquiries/accounts", period)
+      .post("api/inquiries/totalincome", period)
       .then((response) => {
         // Manejar la respuesta exitosa
         //router.push("/home");
@@ -58,7 +58,7 @@ function EstadosCuenta() {
     <Layout>
       <div className="max-w-md mx-auto bg-gray-800 rounded-lg shadow-md p-6 mt-10 ">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-400">
-          Account status
+          Total revenues
         </h2>
         <form
           onSubmit={handleSubmit}
@@ -158,7 +158,7 @@ function EstadosCuenta() {
         </form>
         <form className="shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <div>
-            <h1 className="text-indigo-700">Current balance:</h1>
+            <h1 className="text-indigo-700">Total income:</h1>
           </div>
           <div>
             <p className="bg-green-700 text-white">{datos}</p>
@@ -169,4 +169,4 @@ function EstadosCuenta() {
   );
 }
 
-export default EstadosCuenta;
+export default TotalIngresos;

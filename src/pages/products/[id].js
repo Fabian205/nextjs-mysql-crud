@@ -23,8 +23,8 @@ function ProductPage({ product }) {
         </div> */}
         <div className="bg-gray-800 border border-gray-200 shadow-md p-3">
           <div className="flex flex-row space-x-4">
-            <h1 className="text-indigo-500">Id :</h1>
-            <h2 className="text-white">{product.id}</h2>
+            <h1 className="text-indigo-500 text-2xl">Id :</h1>
+            <h2 className="text-white text-2xl">{product.id}</h2>
           </div>
           <div className="flex flex-row space-x-4">
             <h1 className="text-indigo-500">Account :</h1>

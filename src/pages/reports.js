@@ -32,21 +32,21 @@ function Reports() {
                 Filter
               </a>
             </Link>
-            <Link legacyBehavior href="/admin/estadocuentageneraladmin">
+            <Link legacyBehavior href="/totalgastos">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
-                Estado de Cuenta General
+              Total spends
               </a>
             </Link>
-            <Link legacyBehavior href="/admin/registroexpensasadmin">
+            <Link legacyBehavior href="/totalingresos">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
-                Registro de Expensas
+                Total income
               </a>
             </Link>
-            <Link legacyBehavior href="/admin/edicionexpensasadmin">
+            {/* <Link legacyBehavior href="/admin/edicionexpensasadmin">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
                 Edición de Expensas
               </a>
-            </Link>
+            </Link> */}
           </div>
         </form>
       </div>
