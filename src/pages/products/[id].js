@@ -28,6 +28,10 @@ function ProductPage({ product }) {
           </div>
           <div className="flex flex-row space-x-4">
             <h1 className="text-indigo-500">Account :</h1>
+            <h2 className="text-white">{product.cuenta}</h2>
+          </div>
+          <div className="flex flex-row space-x-4">
+            <h1 className="text-indigo-500">Way to pay :</h1>
             <h2 className="text-white">{product.name}</h2>
           </div>
           <div className="flex flex-row space-x-4">

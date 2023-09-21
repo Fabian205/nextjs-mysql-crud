@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import axiosInstance from "../../axiosInstance";
-
+import Table from "@/components/table";
 
 function ConsultaPagos() {
   const [data, setData] = useState([]);
@@ -162,7 +162,7 @@ function ConsultaPagos() {
           <div>
             <h1 className="text-indigo-700">Dates obtained:</h1>
           </div>
-          <div>
+          {/* <div>
             {data.map((item, index) => (
               <div key={index}>
                 <p className="text-white">Id: {item.id}</p>
@@ -172,6 +172,14 @@ function ConsultaPagos() {
                 <div className="bg-green-700 w-[100px] h-[2px]"></div>
               </div>
             ))}
+          </div> */}
+        </form>
+        
+      </div>
+      <div>
+        <form>
+          <div className="mt-3">
+            <Table data={data} />
           </div>
         </form>
       </div>

@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import axiosInstance from "../../axiosInstance";
-
+import GridIncome from "@/components/gridIncome";
 
 function ConsultaIngresos() {
   const [data, setData] = useState([]);
@@ -162,7 +162,7 @@ function ConsultaIngresos() {
           <div>
             <h1 className="text-indigo-700">Date obtained:</h1>
           </div>
-          <div>
+          {/* <div>
             {data.map((item, index) => (
               <div key={index}>
                 <p className="text-white">Id: {item.id}</p>
@@ -172,6 +172,10 @@ function ConsultaIngresos() {
                 <div className="bg-green-700  text-white w-[100px] h-[2px]"></div>
               </div>
             ))}
+          </div> */}
+          <div className="mt-3">
+            {/* <h1 className="text-indigo-700">Date obtained:</h1> */}
+            <GridIncome data={data} />
           </div>
         </form>
       </div>

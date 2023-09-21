@@ -10,6 +10,7 @@ export function ProductForm() {
     date: "",
     income: "",
     price: "",
+    cuenta: "",
   });
 
   const router = useRouter();
@@ -59,10 +60,48 @@ export function ProductForm() {
       >
         <div className="mb-3">
           <label
-            htmlFor="name"
+            htmlFor="cuenta"
             className="block text-gray-400 text-sm text-bold mb-2"
           >
             Account:
+          </label>
+          <select
+            className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline hover:bg-gray-300"
+            name="cuenta"
+            id="cuenta"
+            value={product.cuenta}
+            onChange={handleChange}
+          >
+            <option color="blue" value="seleccion" defaultValue>
+              Select an account
+            </option>
+            <option color="yellow" value="Pama">
+              Pama
+            </option>
+            <option color="yellow" value="Rp">
+              Rp
+            </option>
+            <option color="green" value="Casa 2 Valle">
+              Casa 2 Valle
+            </option>
+            {/* <option color="gray" value="SavAccount Bp-Pa">
+              Cash Rp
+            </option>
+            <option color="magenta" value="Cash Rp">
+              Cash Rp
+            </option>
+            <option color="magenta" value="Cash Pa">
+              Cash Pa
+            </option> */}
+          </select>
+        </div>
+
+        <div className="mb-3">
+          <label
+            htmlFor="name"
+            className="block text-gray-400 text-sm text-bold mb-2"
+          >
+            Way to pay:
           </label>
           <select
             className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline hover:bg-gray-300"
@@ -72,7 +111,7 @@ export function ProductForm() {
             onChange={handleChange}
           >
             <option color="blue" value="seleccion" defaultValue>
-              Select an account
+              Select a way to pay
             </option>
             <option color="yellow" value="SavAccount Bp-Rp">
               SavAccount Bp-Rp

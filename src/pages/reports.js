@@ -8,9 +8,7 @@ function Reports() {
         <h2 className="text-2xl font-bold mb-10 pt-10 text-center text-gray-400">
           Reports
         </h2>
-        <form
-          className="shadow-md rounded px-8 pb-8 mb-4"
-        >
+        <form className="shadow-md rounded px-8 pb-8 mb-4">
           <div className="flex flex-col">
             <Link legacyBehavior href="/estadoscuenta">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
@@ -34,7 +32,7 @@ function Reports() {
             </Link>
             <Link legacyBehavior href="/totalgastos">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
-              Total spends
+                Total spends
               </a>
             </Link>
             <Link legacyBehavior href="/totalingresos">
@@ -42,11 +40,11 @@ function Reports() {
                 Total income
               </a>
             </Link>
-            {/* <Link legacyBehavior href="/admin/edicionexpensasadmin">
+            <Link legacyBehavior href="/gastosporcuenta">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
-                Edición de Expensas
+                Expenses per account
               </a>
-            </Link> */}
+            </Link>
           </div>
         </form>
       </div>

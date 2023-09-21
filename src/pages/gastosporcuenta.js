@@ -4,11 +4,11 @@ import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import axiosInstance from "../../axiosInstance";
 
-function EstadosCuenta() {
+function GastosPorCuenta() {
   const [datos, setDatos] = useState(" ");
 
   const [period, setPeriod] = useState({
-    name: "",
+    cuenta: "",
     f_ini: "2023-09-01",
     f_fin: "",
   });
@@ -24,7 +24,7 @@ function EstadosCuenta() {
 
   const handleClearInput = () => {
     setPeriod({
-      name: "Select an account",
+      cuenta: "Select an account",
       f_ini: "",
       f_fin: "",
     });
@@ -39,7 +39,7 @@ function EstadosCuenta() {
     console.log("response de login", response); */
 
     await axiosInstance
-      .post("api/inquiries/accounts", period)
+      .post("api/inquiries/expensesperaccount", period)
       .then((response) => {
         // Manejar la respuesta exitosa
         //router.push("/home");
@@ -58,7 +58,7 @@ function EstadosCuenta() {
     <Layout>
       <div className="max-w-md mx-auto bg-gray-800 rounded-lg shadow-md p-6 mt-10 ">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-400">
-          Account status
+          Expenses per account
         </h2>
         <form
           onSubmit={handleSubmit}
@@ -66,31 +66,31 @@ function EstadosCuenta() {
         >
           <div className="mb-4">
             <label
-              htmlFor="name"
+              htmlFor="cuenta"
               className="block font-medium text-gray-400 mb-1"
             >
-              Way to pay:
+              Account:
             </label>
             <select
               className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline hover:bg-gray-300"
-              name="name"
-              id="name"
-              value={period.name}
+              name="cuenta"
+              id="cuenta"
+              value={period.cuenta}
               onChange={handleChange}
             >
               <option color="blue" value="seleccion" defaultValue>
                 Select an account
               </option>
-              <option color="yellow" value="SavAccount Bp-Rp">
-                SavAccount Bp-Rp
+              <option color="yellow" value="Pama">
+                Pama
               </option>
-              <option color="yellow" value="CurAccount Bp-Rp">
-                CurAccount Bp-Rp
+              <option color="yellow" value="Rp">
+                Rp
               </option>
-              <option color="green" value="SavAccount Cacpn-Rp">
-                SavAccount Cacpn-Rp
+              <option color="green" value="Casa 2 Valle">
+                Casa 2 Valle
               </option>
-              <option color="gray" value="SavAccount Bp-Pa">
+              {/* <option color="gray" value="SavAccount Bp-Pa">
                 SavAccount Bp-Pa
               </option>
               <option color="magenta" value="Cash Rp">
@@ -98,7 +98,7 @@ function EstadosCuenta() {
               </option>
               <option color="magenta" value="Cash Pa">
                 Cash Pa
-              </option>
+              </option> */}
             </select>
           </div>
 
@@ -169,4 +169,4 @@ function EstadosCuenta() {
   );
 }
 
-export default EstadosCuenta;
+export default GastosPorCuenta;
