@@ -1,14 +1,35 @@
-import React from 'react';
+import React from "react";
+
 
 function Table({ data }) {
+
+  //item.price viene del data como texto para cambiar a numero uso la propiedad Number de js
+  const sumar = () => {
+    const elementosASumar = data.map((item) => Number(item.price));
+    const suma = elementosASumar.reduce((total, item) => total + item, 0);
+    return suma.toFixed(2);   
+  };
+
   return (
-    <table className="min-w-full divide-y divide-gray-200">
+    <div>
+      <table className="min-w-full divide-y divide-gray-200">
       <thead className="bg-gray-50">
         <tr>
-          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Id</th>          
-          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Spend</th>
-          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
+          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Id
+          </th>
+          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Spend
+          </th>
+          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Date
+          </th>
+          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Description
+          </th>
+          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Account
+          </th>
         </tr>
       </thead>
       <tbody className="bg-white divide-y divide-gray-200">
@@ -18,10 +39,15 @@ function Table({ data }) {
             <td className="px-6 py-4 whitespace-nowrap">{item.price}</td>
             <td className="px-6 py-4 whitespace-nowrap">{item.date}</td>
             <td className="px-6 py-4 whitespace-nowrap">{item.description}</td>
+            <td className="px-6 py-4 whitespace-nowrap">{item.name}</td>
           </tr>
         ))}
+        
       </tbody>
     </table>
+    <p className="mt-4 text-2xl italic">Total Spends: {sumar()}</p>
+    </div>
+    
   );
 }
 

@@ -90,10 +90,10 @@ function GastosPorCuenta() {
               <option color="green" value="Casa 2 Valle">
                 Casa 2 Valle
               </option>
-              {/* <option color="gray" value="SavAccount Bp-Pa">
-                SavAccount Bp-Pa
+              <option color="gray" value="Internal Transfer">
+                Internal Transfer
               </option>
-              <option color="magenta" value="Cash Rp">
+              {/* <option color="magenta" value="Cash Rp">
                 Cash Rp
               </option>
               <option color="magenta" value="Cash Pa">

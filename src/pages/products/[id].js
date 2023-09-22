@@ -64,6 +64,12 @@ function ProductPage({ product }) {
           >
             Edit
           </button>
+          <button
+            className="bg-blue-500 hover:bg-blue-400 ml-2 text-white px-3 py-2 rounded"
+            onClick={() => router.push("/filter")}
+          >
+            Filter
+          </button>
         </div>      
       </div>               
     </Layout>

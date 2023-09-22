@@ -84,15 +84,15 @@ export function ProductForm() {
             <option color="green" value="Casa 2 Valle">
               Casa 2 Valle
             </option>
-            {/* <option color="gray" value="SavAccount Bp-Pa">
-              Cash Rp
+            <option color="gray" value="Internal transfer">
+              Internal transfer
             </option>
-            <option color="magenta" value="Cash Rp">
-              Cash Rp
+            <option color="magenta" value="Adjustment expenses">
+              Adjustment expenses
             </option>
-            <option color="magenta" value="Cash Pa">
-              Cash Pa
-            </option> */}
+            <option color="magenta" value="Income adjustment">
+              Income adjustment
+            </option>
           </select>
         </div>
 

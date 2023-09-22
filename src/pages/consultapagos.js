@@ -9,7 +9,7 @@ function ConsultaPagos() {
   const [data, setData] = useState([]);
 
   const [period, setPeriod] = useState({
-    name: "",
+    cuenta: "",
     f_ini: "",
     f_fin: "",
   });
@@ -25,7 +25,7 @@ function ConsultaPagos() {
 
   const handleClearInput = () => {
     setPeriod({
-      name: "Select an account",
+      cuenta: "Select an account",
       f_ini: "",
       f_fin: "",
     });
@@ -44,9 +44,7 @@ function ConsultaPagos() {
       .then((response) => {
         // Manejar la respuesta exitosa
         //console.log(response.data);
-
         setData(response.data);
-        //console.log(data);
         //router.push("/home");
       })
       .catch((error) => {
@@ -68,38 +66,38 @@ function ConsultaPagos() {
         >
           <div className="mb-4">
             <label
-              htmlFor="name"
+              htmlFor="cuenta"
               className="block font-medium text-gray-400 mb-1"
             >
               Account:
             </label>
             <select
               className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline hover:bg-gray-300"
-              name="name"
-              id="name"
-              value={period.name}
+              name="cuenta"
+              id="cuenta"
+              value={period.cuenta}
               onChange={handleChange}
             >
               <option color="blue" value="seleccion" defaultValue>
                 Select an account
               </option>
-              <option color="yellow" value="SavAccount Bp-Rp">
-                SavAccount Bp-Rp
+              <option color="yellow" value="Pama">
+                Pama
               </option>
-              <option color="yellow" value="CurAccount Bp-Rp">
-                CurAccount Bp-Rp
+              <option color="yellow" value="Rp">
+                Rp
               </option>
-              <option color="green" value="SavAccount Cacpn-Rp">
-                SavAccount Cacpn-Rp
+              <option color="green" value="Casa 2 Valle">
+                Casa 2 Valle
               </option>
-              <option color="gray" value="SavAccount Bp-Pa">
-                SavAccount Bp-Pa
+              <option color="gray" value="Internal transfer">
+                Internal transfer
               </option>
               <option color="magenta" value="Cash Rp">
-                Cash Rp
+                Adjustment expenses
               </option>
               <option color="magenta" value="Cash Pa">
-                Cash Pa
+                Income adjustment
               </option>
             </select>
           </div>
@@ -174,12 +172,11 @@ function ConsultaPagos() {
             ))}
           </div> */}
         </form>
-        
       </div>
       <div>
         <form>
           <div className="mt-3">
-            <Table data={data} />
+            <Table data={data} />            
           </div>
         </form>
       </div>
