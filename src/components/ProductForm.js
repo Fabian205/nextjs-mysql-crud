@@ -28,11 +28,23 @@ export function ProductForm() {
         //toast.success("Product created successfully");
         alert("Product created successfully");
       }
-      router.push("/home");
+      router.push("/new");
     } catch (error) {
       //toast.error(error.response.data.message);
       alert(error.response.data.message);
     }
+    clearText();
+  };
+
+  const clearText = () => {
+    setProduct({
+      name: "",
+      description: "",
+      date: "",
+      income: "",
+      price: "",
+      cuenta: "Select an account",
+    });
   };
 
   const handleChange = ({ target: { name, value } }) =>
