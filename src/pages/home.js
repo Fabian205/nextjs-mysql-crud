@@ -15,11 +15,19 @@ function HomePage({ products }) {
     ));
   };
 
+  const Down=()=>{
+    // Desplazar la página al final
+    window.scrollTo(0, document.body.scrollHeight);
+  };
+
   return (
     <Layout>
-      <h1 className="mb-8 text-2xl font-bold tracking-tight text-gray-800 dark:text-white text-center mt-8">
-        ALL EXPENSES
-      </h1>
+      <div>
+        <h1 className="mb-8 text-2xl font-bold tracking-tight text-gray-800 dark:text-white text-center mt-8">
+          ALL EXPENSES
+        </h1>
+        <button className="dark:text-gray-400 italic underline hover:text-teal-400 text-2xl" onClick={Down}>Down</button>
+      </div>
       <Link legacyBehavior href="/filter">
         <a className="dark:text-gray-400 italic underline hover:text-teal-400 text-2xl">
           Search by id

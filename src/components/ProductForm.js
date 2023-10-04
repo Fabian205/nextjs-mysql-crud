@@ -35,7 +35,7 @@ export function ProductForm() {
     }
     clearText();
   };
-
+//COLOCAR RADIO BUTTON USUARIO ELIGE ENTRE IR A HOME O QUEDARSE EN NEW Y LIMPIAR
   const clearText = () => {
     setProduct({
       name: "",
