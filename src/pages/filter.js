@@ -51,7 +51,6 @@ function Filter() {
               id="filtro"
               name="filtro"
               autoComplete="on"
-              //placeholder="Id"
               value={id}
               onChange={handleChange}
               ref={inputName}
@@ -76,14 +75,13 @@ function Filter() {
         </div>
         <div>
           <button
-            className="bg-blue-600 text-white rounded py-2 px-4 hover:bg-blue-800 mb-4"
+            className="bg-blue-600 text-white rounded py-2 px-4 hover:bg-blue-800 mb-4 mr-8"
             onClick={home}
           >
             Home
           </button>
         </div>
-        </div>
-        
+        </div>        
       </div>
     </Layout>
   );

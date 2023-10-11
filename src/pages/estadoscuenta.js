@@ -25,7 +25,7 @@ function EstadosCuenta() {
   const handleClearInput = () => {
     setPeriod({
       name: "Select an account",
-      f_ini: "",
+      f_ini: "2023-09-01",
       f_fin: "",
     });
   };
@@ -50,8 +50,9 @@ function EstadosCuenta() {
       .catch((error) => {
         // El error 401 será interceptado y manejado de manera personalizada
         console.error(error);
-        handleClearInput();
+        
       });
+      handleClearInput();
   };
 
   return (

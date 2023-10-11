@@ -8,7 +8,7 @@ function CashTotalBalance() {
   const [data, setData] = useState([]);
 
   const [period, setPeriod] = useState({
-    f_ini: "",
+    f_ini: "2023-09-01",
     f_fin: "",
   });
 
@@ -28,19 +28,19 @@ function CashTotalBalance() {
       .post("api/inquiries/cashtotalbalance", period)
       .then((response) => {
         // Manejar la respuesta exitosa
-        console.log(response.data);
+        //console.log(response.data);
         setData(response.data);
       })
       .catch((error) => {
         // El error 401 será interceptado y manejado de manera personalizada
         console.error(error);
-        handleClearInput();
       });
+    handleClearInput();
   };
 
   const handleClearInput = () => {
     setPeriod({
-      f_ini: "",
+      f_ini: "2023-09-01",
       f_fin: "",
     });
   };
