@@ -26,7 +26,7 @@ function EstadosCuenta() {
     setPeriod({
       name: "Select an account",
       f_ini: "2023-09-01",
-      f_fin: "",
+      //f_fin: "",
     });
   };
 

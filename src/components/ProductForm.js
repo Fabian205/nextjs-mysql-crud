@@ -61,6 +61,11 @@ export function ProductForm() {
     }
   }, []);
 
+
+  const sendFilter=()=>{
+    console.log("aqui");
+    router.push("/filter");
+  };
   return (
     <div className="max-w-md mx-auto rounded-lg bg-gray-800 p-6 mt-10">
       <h2 className="text-2xl font-bold mb-6 text-center text-gray-400">
@@ -220,10 +225,16 @@ export function ProductForm() {
             value={product.description}
           ></textarea>
         </div>
-        <button className="bg-blue-600 hover:bg-blue-800 py-2 px-4 rounded focus:outline-none focus: shadow-outline font-bold text-white">
+        <button className="bg-blue-600 hover:bg-blue-800 py-2 px-4 rounded focus:outline-none focus: shadow-outline font-bold text-white mr-5">
           {router.query.id ? "Update Record" : "Save Record"}
-        </button>
+        </button>       
       </form>
+      <div>
+      <button className="bg-blue-600 hover:bg-blue-800 py-2 px-4 rounded focus:outline-none focus: shadow-outline font-bold text-white"
+        onClick={()=> router.push("/filter")}>
+          Filter
+        </button>
+      </div>
     </div>
   );
 }
