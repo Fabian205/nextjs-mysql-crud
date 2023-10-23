@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import { ToastContainer } from "react-toastify";
 import { Navbar } from "./Navbar";
+import Footer from "./Footer";
+
 
 export function Layout({ children }) {
   const router = useRouter();
@@ -18,6 +20,10 @@ export function Layout({ children }) {
       <div className=" h-screen flex justify-center bg-gray-700 overflow-x-auto">
         <div className="container mx-auto h-full">{children}</div>
       </div>
+      <h1>
+        <Footer/>
+      </h1>
+      
       <ToastContainer />     
     </>
   );
