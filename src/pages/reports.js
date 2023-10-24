@@ -45,6 +45,11 @@ function Reports() {
                 Expenses per account
               </a>
             </Link>
+            <Link legacyBehavior href="/gastospordescripcion">
+              <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
+                Expenses per description
+              </a>
+            </Link>
             <Link legacyBehavior href="/cashtotalbalance">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
                 Cash total balance

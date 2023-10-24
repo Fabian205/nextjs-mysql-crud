@@ -3,12 +3,13 @@ import Layout from "@/components/Layout";
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import axiosInstance from "../../axiosInstance";
+import Table from "@/components/table";
 
-function GastosPorCuenta() {
-  const [datos, setDatos] = useState(" ");
+function GastosporDescripcion() {
+  const [data, setData] = useState([]);
 
   const [period, setPeriod] = useState({
-    cuenta: "",
+    descripcion: "",
     f_ini: "2023-09-01",
     f_fin: "",
   });
@@ -24,8 +25,8 @@ function GastosPorCuenta() {
 
   const handleClearInput = () => {
     setPeriod({
-      cuenta: "Select an account",
-      f_ini: "",
+      descripcion: "Select an account",
+      f_ini: "2023-09-01",
       f_fin: "",
     });
   };
@@ -39,13 +40,12 @@ function GastosPorCuenta() {
     console.log("response de login", response); */
 
     await axiosInstance
-      .post("api/inquiries/expensesperaccount", period)
+      .post("api/inquiries/expensesperdescription", period)
       .then((response) => {
         // Manejar la respuesta exitosa
-        //router.push("/home");
         //console.log(response.data);
-        setDatos(response.data);
-        //console.log(datos);
+        setData(response.data);
+        //router.push("/home");
       })
       .catch((error) => {
         // El error 401 será interceptado y manejado de manera personalizada
@@ -58,7 +58,7 @@ function GastosPorCuenta() {
     <Layout>
       <div className="max-w-md mx-auto bg-gray-800 rounded-lg shadow-md p-6 mt-10 ">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-400">
-          Expenses by account
+          Expenses by Description
         </h2>
         <form
           onSubmit={handleSubmit}
@@ -66,39 +66,39 @@ function GastosPorCuenta() {
         >
           <div className="mb-4">
             <label
-              htmlFor="cuenta"
+              htmlFor="descripcion"
               className="block font-medium text-gray-400 mb-1"
             >
               Account:
             </label>
             <select
               className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline hover:bg-gray-300"
-              name="cuenta"
-              id="cuenta"
-              value={period.cuenta}
+              name="descripcion"
+              id="descripcion"
+              value={period.descripcion}
               onChange={handleChange}
             >
               <option color="blue" value="seleccion" defaultValue>
-                Select an account
+                Select an description
               </option>
-              <option color="yellow" value="Pama">
-                Pama
+              <option color="yellow" value="Mano de Obra">
+                Mano de Obra
               </option>
-              <option color="yellow" value="Rp">
-                Rp
+              <option color="yellow" value="Materials">
+                Materials
               </option>
-              <option color="green" value="Casa 2 Valle">
-                Casa 2 Valle
+              <option color="green" value="Arq Pablo">
+                Arq Pablo
               </option>
-              <option color="gray" value="Internal Transfer">
-                Internal Transfer
+              <option color="gray" value="Others">
+                Others
               </option>
-              {/* <option color="magenta" value="Cash Rp">
-                Cash Rp
+              <option color="magenta" value="Obras add">
+                Obras add
               </option>
-              <option color="magenta" value="Cash Pa">
-                Cash Pa
-              </option> */}
+              <option color="magenta" value="Asesoria">
+                Asesoria
+              </option>
             </select>
           </div>
 
@@ -107,7 +107,7 @@ function GastosPorCuenta() {
               htmlFor="f_ini"
               className="block font-medium text-gray-400 mb-1"
             >
-              Since:
+              Sinse:
             </label>
             <div className="relative">
               <input
@@ -158,10 +158,14 @@ function GastosPorCuenta() {
         </form>
         <form className="shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <div>
-            <h1 className="text-indigo-700">Current balance:</h1>
+            <h1 className="text-indigo-700">Dates obtained:</h1>
           </div>
-          <div>
-            <p className="bg-green-700 text-white">{datos}</p>
+        </form>
+      </div>
+      <div>
+        <form>
+          <div className="mt-3">
+            <Table data={data} />            
           </div>
         </form>
       </div>
@@ -169,4 +173,5 @@ function GastosPorCuenta() {
   );
 }
 
-export default GastosPorCuenta;
+
+export default GastosporDescripcion

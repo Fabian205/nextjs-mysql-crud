@@ -16,7 +16,7 @@ export function Navbar() {
           className="flex items-center"
         >
           <img
-            src="nobalog.png"
+            src="/nobalog.png"
             className="h-8 mr-5"
             alt="www.nobasys.com"
           />

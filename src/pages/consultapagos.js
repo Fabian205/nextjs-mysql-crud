@@ -160,17 +160,6 @@ function ConsultaPagos() {
           <div>
             <h1 className="text-indigo-700">Dates obtained:</h1>
           </div>
-          {/* <div>
-            {data.map((item, index) => (
-              <div key={index}>
-                <p className="text-white">Id: {item.id}</p>
-                <p className="text-white">Expense: {item.price}</p>
-                <p className="text-white">Date: {item.date}</p>
-                <p className="text-white">Description: {item.description}</p>
-                <div className="bg-green-700 w-[100px] h-[2px]"></div>
-              </div>
-            ))}
-          </div> */}
         </form>
       </div>
       <div>
