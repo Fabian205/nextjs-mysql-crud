@@ -6,11 +6,11 @@ import axiosInstance from "../../axiosInstance";
 import GridIncome from "@/components/gridIncome";
 
 function ConsultaIngresos() {
-  const [data, setData] = useState([]);
+  const [products, setProducts] = useState([]);
 
   const [period, setPeriod] = useState({
     name: "",
-    f_ini: "",
+    f_ini: "2023-09-01",
     f_fin: "",
   });
 
@@ -45,22 +45,22 @@ function ConsultaIngresos() {
         // Manejar la respuesta exitosa
         //console.log(response.data);
 
-        setData(response.data);
+        setProducts(response.data);
         //console.log(data);
         //router.push("/home");
       })
       .catch((error) => {
         // El error 401 será interceptado y manejado de manera personalizada
         console.error(error);
-        handleClearInput();
+        //handleClearInput();
       });
   };
 
   return (
     <Layout>
-      <div className="max-w-md mx-auto bg-gray-800 rounded-lg shadow-md p-6 mt-10 ">
+      <div className="max-w-md mx-auto bg-gray-800 rounded-lg shadow-md p-6 mt-5 mb-5 ">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-400">
-          Income inquiry
+          Incomes inquiry
         </h2>
         <form
           onSubmit={handleSubmit}
@@ -175,7 +175,7 @@ function ConsultaIngresos() {
           </div> */}
           <div className="mt-3">
             {/* <h1 className="text-indigo-700">Date obtained:</h1> */}
-            <GridIncome data={data} />
+            <GridIncome products={products} />
           </div>
         </form>
       </div>

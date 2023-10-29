@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import axiosInstance from "../../axiosInstance";
 import Table from "@/components/table";
+import Link from "next/link";
 
 function GastosporDescripcion() {
   const [data, setData] = useState([]);
@@ -52,6 +53,14 @@ function GastosporDescripcion() {
         console.error(error);
         handleClearInput();
       });
+  };
+
+  const scrollToTop = () => {
+    document.querySelector("#down").scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToBottom = () => {
+    document.querySelector("#top").scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -163,11 +172,34 @@ function GastosporDescripcion() {
         </form>
       </div>
       <div>
+      <div className="scroll-smooth">
+          <button
+            id="down"
+            className="dark:text-gray-400 italic underline hover:text-teal-400 text-xl"
+            onClick={scrollToBottom}
+          >
+            Down
+          </button>
+        </div>
         <form>
           <div className="mt-3">
             <Table data={data} />            
           </div>
         </form>
+        <div className="scroll-smooth">
+          <button
+            id="top"
+            className="dark:text-gray-400 italic underline hover:text-teal-400 text-xl mb-3"
+            onClick={scrollToTop}
+          >
+            Top
+          </button>
+        </div>
+        <Link legacyBehavior href="/filter">
+          <a className="dark:text-gray-400 italic underline hover:text-teal-400 text-xl pb-3">
+            Search by id
+          </a>
+        </Link>
       </div>
     </Layout>
   );

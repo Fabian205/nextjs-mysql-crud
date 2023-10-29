@@ -25,10 +25,10 @@ function Table2({ data }) {
 
   return (
     <div>
-      <div className="mb-4 dark: text-gray-900">
-        <p className="mt-4 text-xl italic dark:text-gray-400">Total Incomes: {sumaIncome()}</p>
-        <p className="mt-4 text-xl italic dark:text-gray-400">Total Spends: {sumaPrice()}</p>
-        <p className="mt-4 text-xl italic dark: text-teal-400">Saldo: {saldo()}</p>
+      <div className="mb-3 dark: text-gray-900">
+        <p className="mt-2 text-xl italic dark:text-gray-400">Incomes total: {sumaIncome()}</p>
+        <p className="mt-2 text-xl italic dark:text-gray-400">Expense total: {sumaPrice()}</p>
+        <p className="mt-2 text-xl italic dark: text-teal-400">Balance: {saldo()}</p>
       </div>
       <table className="min-w-full divide-y divide-gray-200">
         <thead className="bg-gray-50">

@@ -4,13 +4,14 @@ import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import axiosInstance from "../../axiosInstance";
 import Table2 from "@/components/Table2";
+import Link from "next/link";
 
 function EstadosCuentaTabla() {
   const [data, setData] = useState([]);
 
   const [period, setPeriod] = useState({
     name: "",
-    f_ini: "",
+    f_ini: "2023-09-01",
     f_fin: "",
   });
 
@@ -50,15 +51,22 @@ function EstadosCuentaTabla() {
       .catch((error) => {
         // El error 401 será interceptado y manejado de manera personalizada
         console.error(error);
-        handleClearInput();
+        //handleClearInput();
       });
   };
 
+  const scrollToTop = () => {
+    document.querySelector("#down").scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToBottom = () => {
+    document.querySelector("#top").scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <Layout>
       <div className="max-w-md mx-auto bg-gray-800 rounded-lg shadow-md p-6 mt-10 ">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-400">
-          Accounts State Table
+          Detailed account statements
         </h2>
         <form
           onSubmit={handleSubmit}
@@ -163,15 +171,37 @@ function EstadosCuentaTabla() {
         </form>
       </div>
       <div>
+        <div className="scroll-smooth">
+          <button
+            id="down"
+            className="dark:text-gray-400 italic underline hover:text-teal-400 text-xl"
+            onClick={scrollToBottom}
+          >
+            Down
+          </button>
+        </div>       
         <form>
-          <div className="mt-3">
-            <Table2 data={data} />            
+          <div className="mt-3 mb-3">
+            <Table2 data={data} />
           </div>
         </form>
+        <div className="scroll-smooth">
+          <button
+            id="top"
+            className="dark:text-gray-400 italic underline hover:text-teal-400 text-xl mb-3"
+            onClick={scrollToTop}
+          >
+            Top
+          </button>
+        </div>
+        <Link legacyBehavior href="/filter">
+          <a className="dark:text-gray-400 italic underline hover:text-teal-400 text-xl pb-3">
+            Search by id
+          </a>
+        </Link>
       </div>
     </Layout>
   );
-
 }
 
-export default EstadosCuentaTabla
+export default EstadosCuentaTabla;

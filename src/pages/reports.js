@@ -12,22 +12,22 @@ function Reports() {
           <div className="flex flex-col">
             <Link legacyBehavior href="/estadoscuenta">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
-                Account status
+                Account statements
               </a>
             </Link>
             <Link legacyBehavior href="/estadoscuentatabla">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
-                Account state table
+              Detailed account statements
               </a>
             </Link>
             <Link legacyBehavior href="/consultapagos">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
-                Payment inquiry
+                Payments inquiry
               </a>
             </Link>
             <Link legacyBehavior href="/consultaingresos">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
-                Income inquiry
+                Incomes inquiry
               </a>
             </Link>
             <Link legacyBehavior href="/filter">
@@ -37,22 +37,22 @@ function Reports() {
             </Link>
             <Link legacyBehavior href="/totalgastos">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
-                Total spends
+                Expens total
               </a>
             </Link>
             <Link legacyBehavior href="/totalingresos">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
-                Total income
+                Incomes total
               </a>
             </Link>
             <Link legacyBehavior href="/gastosporcuenta">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
-                Expenses per account
+                Expenses by account
               </a>
             </Link>
             <Link legacyBehavior href="/gastospordescripcion">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
-                Expenses per description
+                Expenses by description
               </a>
             </Link>
             <Link legacyBehavior href="/cashtotalbalance">

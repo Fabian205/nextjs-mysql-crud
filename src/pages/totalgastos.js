@@ -58,7 +58,7 @@ function TotalGastos() {
     <Layout>
       <div className="max-w-md mx-auto bg-gray-800 rounded-lg shadow-md p-6 mt-10 ">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-400">
-        Total expenditures
+        Expens total
         </h2>
         <form
           onSubmit={handleSubmit}
