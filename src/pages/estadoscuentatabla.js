@@ -3,9 +3,9 @@ import Layout from "@/components/Layout";
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import axiosInstance from "../../axiosInstance";
-import GridIncome from "@/components/gridIncome";
+import Table2 from "@/components/Table2";
 
-function ConsultaIngresos() {
+function EstadosCuentaTabla() {
   const [data, setData] = useState([]);
 
   const [period, setPeriod] = useState({
@@ -40,13 +40,11 @@ function ConsultaIngresos() {
     console.log("response de login", response); */
 
     await axiosInstance
-      .post("api/inquiries/income", period)
+      .post("api/inquiries/accountstatetable", period)
       .then((response) => {
         // Manejar la respuesta exitosa
         //console.log(response.data);
-
         setData(response.data);
-        //console.log(data);
         //router.push("/home");
       })
       .catch((error) => {
@@ -60,7 +58,7 @@ function ConsultaIngresos() {
     <Layout>
       <div className="max-w-md mx-auto bg-gray-800 rounded-lg shadow-md p-6 mt-10 ">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-400">
-          Income inquiry
+          Accounts State Table
         </h2>
         <form
           onSubmit={handleSubmit}
@@ -71,7 +69,7 @@ function ConsultaIngresos() {
               htmlFor="name"
               className="block font-medium text-gray-400 mb-1"
             >
-              Account:
+              Way to pay:
             </label>
             <select
               className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline hover:bg-gray-300"
@@ -160,27 +158,20 @@ function ConsultaIngresos() {
         </form>
         <form className="shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <div>
-            <h1 className="text-indigo-700">Date obtained:</h1>
+            <h1 className="text-indigo-700">Dates obtained:</h1>
           </div>
-          {/* <div>
-            {data.map((item, index) => (
-              <div key={index}>
-                <p className="text-white">Id: {item.id}</p>
-                <p className="text-white">Income: {item.income}</p>
-                <p className="text-white">Date: {item.date}</p>
-                <p className="text-white">Description: {item.description}</p>
-                <div className="bg-green-700  text-white w-[100px] h-[2px]"></div>
-              </div>
-            ))}
-          </div> */}
+        </form>
+      </div>
+      <div>
+        <form>
           <div className="mt-3">
-            {/* <h1 className="text-indigo-700">Date obtained:</h1> */}
-            <GridIncome data={data} />
+            <Table2 data={data} />            
           </div>
         </form>
       </div>
     </Layout>
   );
+
 }
 
-export default ConsultaIngresos;
+export default EstadosCuentaTabla

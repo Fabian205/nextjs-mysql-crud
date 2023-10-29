@@ -15,6 +15,11 @@ function Reports() {
                 Account status
               </a>
             </Link>
+            <Link legacyBehavior href="/estadoscuentatabla">
+              <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
+                Account state table
+              </a>
+            </Link>
             <Link legacyBehavior href="/consultapagos">
               <a className="dark:text-gray-400 italic underline hover:text-teal-400 ">
                 Payment inquiry

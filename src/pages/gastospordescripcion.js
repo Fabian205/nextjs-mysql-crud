@@ -107,7 +107,7 @@ function GastosporDescripcion() {
               htmlFor="f_ini"
               className="block font-medium text-gray-400 mb-1"
             >
-              Sinse:
+              Since:
             </label>
             <div className="relative">
               <input
