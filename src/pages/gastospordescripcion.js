@@ -111,8 +111,11 @@ function GastosporDescripcion() {
               <option color="magenta" value="Food mapa">
                 Food mapa
               </option>
-                <option color="magenta" value="Food rp">
+              <option color="magenta" value="Food rp">
                 Food rp
+              </option>
+              <option color="magenta" value="Food rp">
+                Nedicines ma
               </option>
             </select>
           </div>
