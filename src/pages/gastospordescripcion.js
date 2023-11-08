@@ -114,10 +114,10 @@ function GastosporDescripcion() {
               <option color="magenta" value="Food rp">
                 Food rp
               </option>
-              <option color="magenta" value="Food rp">
+              <option color="magenta" value="Medicines rp">
                 Medicines rp
               </option>
-              <option color="magenta" value="Food rp">
+              <option color="magenta" value="Medicines ma">
                 Medicines ma
               </option>
             </select>
