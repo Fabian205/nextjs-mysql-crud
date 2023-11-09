@@ -93,31 +93,31 @@ function GastosporDescripcion() {
               <option color="yellow" value="Mano de Obra">
                 Mano de Obra
               </option>
-              <option color="yellow" value="Materials">
+              <option color="green" value="Materials">
                 Materials
               </option>
-              <option color="green" value="Arq Pablo">
+              <option color="gray" value="Arq Pablo">
                 Arq Pablo
               </option>
-              <option color="gray" value="Others">
+              <option color="magenta" value="Others">
                 Others
               </option>
-              <option color="magenta" value="Obras add">
+              <option color="white" value="Obras add">
                 Obras add
               </option>
-              <option color="magenta" value="Asesoria">
+              <option color="red" value="Asesoria">
                 Asesoria
               </option>
-              <option color="magenta" value="Food mapa">
+              <option color="olive" value="Food mapa">
                 Food mapa
               </option>
-              <option color="magenta" value="Food rp">
+              <option color="lime" value="Food rp">
                 Food rp
               </option>
-              <option color="magenta" value="Medicines rp">
+              <option color="teal" value="Medicines rp">
                 Medicines rp
               </option>
-              <option color="magenta" value="Medicines ma">
+              <option color="agua" value="Medicines ma">
                 Medicines ma
               </option>
             </select>
