@@ -15,6 +15,8 @@ function GastosporDescripcion() {
     f_fin: "",
   });
 
+  const [description2, setDescription2] = useState("");
+
   const router = useRouter();
 
   const handleChange = (e) => {
@@ -24,9 +26,14 @@ function GastosporDescripcion() {
     });
   };
 
+  const handleChangeDescription2 = (e) => {
+    setDescription2(e.target.description2);
+    console.log(e.target.description2);
+  };
+
   const handleClearInput = () => {
     setPeriod({
-      descripcion: "Select an account",
+      descripcion: "Select a description",
       f_ini: "2023-09-01",
       f_fin: "",
     });
@@ -74,11 +81,31 @@ function GastosporDescripcion() {
           className="shadow-md rounded px-8 pt-6 pb-8 mb-4"
         >
           <div className="mb-4">
-            <label
+            <div className="mb-4">
+              <label
+                htmlFor="descripcion"
+                className="block font-medium text-gray-400 mb-1"
+              >
+                Description
+              </label>
+              <input
+                type="text"
+                id="descripcion"
+                name="descripcion"
+                autoComplete="on"
+                placeholder="Descripcion"
+                value={period.descripcion}
+                onChange={handleChange}
+                
+                className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"
+                required
+              />
+            </div>
+            {/* <label
               htmlFor="descripcion"
               className="block font-medium text-gray-400 mb-1"
             >
-              Account:
+              Description:
             </label>
             <select
               className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:shadow-outline hover:bg-gray-300"
@@ -120,7 +147,10 @@ function GastosporDescripcion() {
               <option color="agua" value="Medicines ma">
                 Medicines ma
               </option>
-            </select>
+              <option color="agua" value="Lou">
+                Lou
+              </option>
+            </select> */}
           </div>
 
           <div className="mb-4">
@@ -184,7 +214,7 @@ function GastosporDescripcion() {
         </form>
       </div>
       <div>
-      <div className="scroll-smooth">
+        <div className="scroll-smooth">
           <button
             id="down"
             className="dark:text-gray-400 italic underline hover:text-teal-400 text-xl"
@@ -195,7 +225,7 @@ function GastosporDescripcion() {
         </div>
         <form>
           <div className="mt-3">
-            <Table data={data} />            
+            <Table data={data} />
           </div>
         </form>
         <div className="scroll-smooth">
@@ -217,5 +247,4 @@ function GastosporDescripcion() {
   );
 }
 
-
-export default GastosporDescripcion
+export default GastosporDescripcion;
