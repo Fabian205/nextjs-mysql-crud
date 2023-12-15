@@ -50,9 +50,8 @@ function EstadosCuenta() {
       .catch((error) => {
         // El error 401 será interceptado y manejado de manera personalizada
         console.error(error);
-        
       });
-      handleClearInput();
+    handleClearInput();
   };
 
   return (
@@ -87,6 +86,9 @@ function EstadosCuenta() {
               </option>
               <option color="yellow" value="CurAccount Bp-Rp">
                 CurAccount Bp-Rp
+              </option>
+              <option color="yellow" value="Recarga Deuna Bp-Rp">
+                Recarga Deuna Bp-Rp
               </option>
               <option color="green" value="SavAccount Cacpn-Rp">
                 SavAccount Cacpn-Rp
