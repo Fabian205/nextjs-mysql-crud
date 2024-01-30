@@ -6,6 +6,8 @@ import axiosInstance from "../../axiosInstance";
 import Table from "@/components/table";
 import Link from "next/link";
 
+
+
 function GastosporDescripcion() {
   const [data, setData] = useState([]);
 
@@ -14,6 +16,17 @@ function GastosporDescripcion() {
     f_ini: "2023-09-01",
     f_fin: "",
   });
+
+  const descripcion = period.descripcion;
+  const fecha_ini = period.f_ini;
+  const fecha_fin = period.f_fin;
+
+  const openURLNewTAb = () => {
+    const url = `https://www.nobasys.com/api/ReportExpensesByDescription.php?DESCRIPTION=${descripcion}&FECHA_INI=${fecha_ini}&FECHA_FIN=${fecha_fin}`; 
+    /* const url = `http://localhost/api/ReportExpensesByDescription.php?DESCRIPTION=${descripcion}&FECHA_INI=${fecha_ini}&FECHA_FIN=${fecha_fin}`; */
+  
+    window.open(url, "_blank");
+  };
 
   const [description2, setDescription2] = useState("");
 
@@ -96,7 +109,6 @@ function GastosporDescripcion() {
                 placeholder="Descripcion"
                 value={period.descripcion}
                 onChange={handleChange}
-                
                 className="shadow appearance-none border rounded w-full py-2 px-3 bg-gray-700 text-white leading-tight focus:outline-none focus:sahdow-outline"
                 required
               />
@@ -217,10 +229,18 @@ function GastosporDescripcion() {
         <div className="scroll-smooth">
           <button
             id="down"
-            className="dark:text-gray-400 italic underline hover:text-teal-400 text-xl"
+            className="dark:text-gray-400 italic underline hover:text-teal-400 text-xl pb-5"
             onClick={scrollToBottom}
           >
             Down
+          </button>
+        </div>
+        <div>
+          <button
+            className="bg-red-600 text-white rounded py-2 px-4 hover:bg-red-800 mb-4"
+            onClick={openURLNewTAb}
+          >
+            PDF
           </button>
         </div>
         <form>

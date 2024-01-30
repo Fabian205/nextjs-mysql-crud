@@ -2,7 +2,7 @@ import { pool } from "@/config/db";
 
 export default async function handleAccount(req, res) {
   const { descripcion, f_ini, f_fin } = req.body;
-  console.log(descripcion, f_ini, f_fin)
+  //console.log(descripcion, f_ini, f_fin)
 
   try {
     //const [result] = await pool.query("SELECT income, date FROM product WHERE name ='" + name + "' AND date >= '" + f_ini + "' AND date <= '" + f_fin + "' AND income != '"+ 0 +"'  ");
