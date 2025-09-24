@@ -96,10 +96,10 @@ function EstadosCuenta() {
               <option color="gray" value="SavAccount Bp-Pa">
                 SavAccount Bp-Pa
               </option>
-              <option color="magenta" value="Cash Rp">
+              <option color="magenta" value="SavAccount BPacificRp">
                 Cash Rp
               </option>
-              <option color="magenta" value="Cash Pa">
+              <option color="magenta" value="Cash Rp">
                 Cash Pa
               </option>
             </select>
