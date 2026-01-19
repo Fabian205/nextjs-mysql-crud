@@ -31,7 +31,7 @@ export { pool }; */
 const pool = createPool({
   host: "aws.connect.psdb.cloud",
   user: "ymevsyxb4mlpibdissiv",
-  password: "pscale_pw_Iq3gkSJxzGPPlFdi26T5nc9ZFPTlResB8uIYxAojMfh",
+  
   //port: 3306,
   database: "productsdb",
   ssl: {
