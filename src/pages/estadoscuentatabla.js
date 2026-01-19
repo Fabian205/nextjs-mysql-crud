@@ -104,11 +104,14 @@ function EstadosCuentaTabla() {
               <option color="gray" value="SavAccount Bp-Pa">
                 SavAccount Bp-Pa
               </option>
-              <option color="magenta" value="Cash Rp">
-                Cash Rp
+              <option color="gray" value="SavAccount BPacificRp">
+                SavAccount BPacificRp
               </option>
-              <option color="magenta" value="Cash Pa">
-                Cash Pa
+              <option color="gray" value="Credit Card Rp">
+                Credit Card Rp
+              </option>
+              <option color="gray" value="Cash Rp">
+                Cash Rp
               </option>
             </select>
           </div>
@@ -182,7 +185,7 @@ function EstadosCuentaTabla() {
           >
             Down
           </button>
-        </div>       
+        </div>
         <form>
           <div className="mt-3 mb-3">
             <Table2 data={data} />
