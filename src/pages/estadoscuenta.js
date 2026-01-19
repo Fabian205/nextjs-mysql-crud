@@ -58,7 +58,7 @@ function EstadosCuenta() {
     <Layout>
       <div className="max-w-md mx-auto bg-gray-800 rounded-lg shadow-md p-6 mt-10 ">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-400">
-          Account statements 02
+          Account statements
         </h2>
         <form
           onSubmit={handleSubmit}
@@ -97,10 +97,13 @@ function EstadosCuenta() {
                 SavAccount Bp-Pa
               </option>
               <option color="magenta" value="SavAccount BPacificRp">
-                Cash Rp
+                SavAccount BPacificRp
+              </option>
+              <option color="magenta" value="Credit Card Rp">
+                Credit Card Rp
               </option>
               <option color="magenta" value="Cash Rp">
-                Cash Pa
+                Cash Rp
               </option>
             </select>
           </div>
