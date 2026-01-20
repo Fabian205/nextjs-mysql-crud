@@ -105,7 +105,7 @@ function EstadosCuentaTabla() {
                 SavAccount Bp-Pa
               </option>
               <option color="gray" value="SavAccount PacificRp">
-                SavAccount BPacificRp
+                SavAccount PacificRp
               </option>
               <option color="gray" value="Credit Card Rp">
                 Credit Card Rp

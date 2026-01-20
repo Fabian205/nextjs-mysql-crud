@@ -35,7 +35,7 @@ export function ProductForm() {
     }
     clearText();
   };
-//COLOCAR RADIO BUTTON USUARIO ELIGE ENTRE IR A HOME O QUEDARSE EN NEW Y LIMPIAR
+  //COLOCAR RADIO BUTTON USUARIO ELIGE ENTRE IR A HOME O QUEDARSE EN NEW Y LIMPIAR
   const clearText = () => {
     setProduct({
       name: "",
@@ -61,8 +61,7 @@ export function ProductForm() {
     }
   }, []);
 
-
-  const sendFilter=()=>{
+  const sendFilter = () => {
     console.log("aqui");
     router.push("/filter");
   };
@@ -145,11 +144,14 @@ export function ProductForm() {
             <option color="gray" value="SavAccount Bp-Pa">
               SavAccount Bp-Pa
             </option>
-            <option color="magenta" value="Cash Rp">
-              Cash Rp
+            <option color="gray" value="SavAccount PacificRp">
+              SavAccount PacificRp
             </option>
-            <option color="magenta" value="Cash Pa">
-              Cash Pa
+            <option color="gray" value="Credit Card Rp">
+              Credit Card Rp
+            </option>
+            <option color="gray" value="Cash Rp">
+              Cash Rp
             </option>
           </select>
         </div>
@@ -230,11 +232,13 @@ export function ProductForm() {
         </div>
         <button className="bg-blue-600 hover:bg-blue-800 py-2 px-4 rounded focus:outline-none focus: shadow-outline font-bold text-white mr-5">
           {router.query.id ? "Update Record" : "Save Record"}
-        </button>       
+        </button>
       </form>
       <div>
-      <button className="bg-blue-600 hover:bg-blue-800 py-2 px-4 rounded focus:outline-none focus: shadow-outline font-bold text-white"
-        onClick={()=> router.push("/filter")}>
+        <button
+          className="bg-blue-600 hover:bg-blue-800 py-2 px-4 rounded focus:outline-none focus: shadow-outline font-bold text-white"
+          onClick={() => router.push("/filter")}
+        >
           Filter
         </button>
       </div>
